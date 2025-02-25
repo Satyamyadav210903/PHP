@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Registration</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="Assets/css/bootstrap.css">
+  <link href="https://cdn.datatables.net/v/dt/dt-1.13.3/datatables.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script type="text/javascript">
+    function validate(){
+      if(document.form.birthday.value <= "12/12/2007" && document.form.birthday.value >= "12/12/1990"){
+        alert("Your age very less ,please try provide 18 or greater!");
+      }
+    }
+    </script>
+  <style>  
+    body{
+      background-color: ;
+    }
+    form{
+      width:100%;
+      padding-top: 10px;
+      font-size: 14px;
+      margin-top: 30px;
+      background-color: ;
+      border-color: black;
+    }
+    .global-container{
+      height:100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     background-color: #f5f5f5;
+    }
+    .btn{
+      width: 600px;
+	    font-size: 15px;
+	    margin-top:20px;
+      color: white;
+      background-color: default;
+    }
+    .sign-up{
+      text-align:center;
+      padding:20px 0 0;
+    }
+    .data{
+      text-align: center;
+    }
+    .div_tag{
+      text-align: left;
+    }
+    .table{
+      width: 100%;
+      background-color: ;
+      border: 2px;
+    }
+    .tb{
+      width: 100%;
+    }
+    .l{
+      text-align: center;
+    }
+</style>
+</head>
+<body>
+   <div class="global-container">
+	   <div class="card login-form">
+	     <div class="card-body">
+
+      <form method="post" action="value.php" name="form" color="lightgray">
+        <div class="tb">
+        <table class="table" border="">
+        <tr>
+           <td class="data" colspan="6"><div><h2>This is for Registration</h2></td><div>
+        </tr>
+        <tr>
+          <td class="data" colspan="2"><div class="div_tag">
+          <label for="Name">Name:</label>
+          <input type="text" name="name" placeholder="Enter name" required minlength="3" maxlength="20">
+          </div>
+          <td class="data" colspan="2"><div class="div_tag">
+           <label for="father">Father name:</label><input type="text" name="father" placeholder="Enter father name" required minlength="3" maxlength="20">
+           </div>
+        </tr>
+        <tr>
+          <td class="data" colspan="2"><div class="div_tag">
+           <label>Gender: <select name="gender"> select<option value="male">Male</option><option value="female">Female</option></select>
+           </div>
+           <td class="data" colspan="2"><div class="div_tag">
+           <label for="birthday">Date of birth:</label>
+           <input type="date" name="birthday" required minvalue="12/12/2007" maxvalue="12/12/1990">
+          </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="data" colspan="2"><div class="div_tag">
+            <label for="mob">Mob:</label>
+            <input type="text" name="mob" placeholder="Enter phone number" required minlength="10" maxlength="10">
+            </div>
+          </td>
+          <td class="data"><div class="div_tag">
+             <label for="email">Email:</label>
+             <input type="email" name="user" placeholder="Enter your email" require required minlength="12">
+             </div>
+          </td>
+          <td class="data"><div class="div_tag">
+           <label for="password">password:</label>
+           <input type="password" name="pass" placeholder="Enter password" required minlength="8">
+          </div>
+         </td>
+        </tr>
+          <td class="data" colspan="2"><div><button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>&nbsp;</div></td>
+          <td class="data" colspan="3"><div><button type="reset" class="btn btn-primary btn-block">Reset</button></div></td>
+        </tr>  
+      </table>
+  </div>
+  <div class="l">
+  <h4>already Have account?<a href="login.php" >Login</h4>
+  </div>
+      </form> 
+  </div>
+  </div>
+  </div>
+<script src="Assets/js/jquery.js"></script>
+<script src="Assets/js/boostrapjs.js"></script>
+<script src="https://cdn.datatables.net/v/dt/dt-1.13.3/datatables.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<section>
+  <article>1</article>
+  <article>2</article>
+  <article>3</article>
+  <article>4</article>
+</section>
+
+<button onclick="showNextPage()">Next</button>
+
+<script>
+    var currentPage = 1;
+    var totalPages = 3;
+
+    function showNextPage() {
+        if (currentPage < totalPages) {
+            var currentFrame = document.getElementById('page' + currentPage);
+            currentFrame.style.display = 'none';
+
+            currentPage++;
+
+            var nextFrame = document.getElementById('page' + currentPage);
+            nextFrame.style.display = 'block';
+        }
+    }
+</script>

@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Vertual-ATM card</title>
+    </head>
+    <style>
+        body{
+            font-family: Arial,sans-serif;
+            margin:0;
+            padding: 0;
+            background-color: white;
+        }
+        .card{
+            width: 300px;
+            height: 180px;
+            background-color: white;
+            border-radius: 10px;
+            background: url('background.jpg') no-repeat center/cover;
+            margin: 50px auto;
+            padding: 20px;
+            position: relative;
+
+        }
+        .chip{
+            border-radius: 10px;
+            position: absolute;
+            color: white;
+            top: 20px;
+            left: 20px;
+        }
+        .card-number{
+            padding-top: 20px;
+            font-size: 25px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .cvv{
+            
+            font-size: 15px;
+            text-align: center;
+            letter-spacing: 2px;
+            color: white;
+        }
+        .expiration{
+            padding-top: 40px;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-holder{
+            font-size: 14px;
+            color: white;
+            margin-bottom: 10px;
+
+        }
+        .logo{
+            align: bottom;
+            position:absolute;
+            bottom: 20px;
+            color: white;
+            right: 20px;
+        }
+        main{
+            background-color: white;
+        }
+    </style>
+    <body>
+        <main>
+        <div class="card">
+            <img src="chip.jpg" alt="chip" width="50" height="30" class="chip">
+            <br>
+            <div class="card-number">xxxx xxxx xxxx</div>
+            <div class="cvv">CVV:XXX</div>
+            <div class="expiration">validity: mm/yy</div>
+            <div class="card-holder">SATYAM RAYKESH YADAV</div>
+            <img src="logo1.jpg" alt="logo" width="80" height="50" class="logo">
+        </div>
+    </main>
+    </body>
+</html>

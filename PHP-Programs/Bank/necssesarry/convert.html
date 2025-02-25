@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form to PDF</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <!-- Your HTML form goes here -->
+    <form id="myForm">
+        <!-- Form fields -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <!-- Add more form fields as needed -->
+
+        <!-- Button to trigger PDF generation -->
+        <button onclick="generatePDF()">Generate PDF</button>
+    </form>
+
+    <!-- JavaScript to convert the form to PDF -->
+    <script>
+        function generatePDF() {
+            // Create a jsPDF instance
+            var pdf = new jsPDF();
+
+            // Get the form element
+            var form = document.getElementById("myForm");
+
+            // Convert the form to a data URL
+            var formData = new FormData(form);
+            var formAsDataUrl = "data:text/html;base64," + btoa(new XMLSerializer().serializeToString(form));
+
+            // Add the form data to the PDF
+            pdf.text(10, 10, 'Form Data:');
+            pdf.addHTML(formAsDataUrl, function() {
+                // Save or display the PDF
+                pdf.save("form_data.pdf");
+            });
+        }
+    </script>
+    
+    <button onclick="showNextPage()">Next</button>
+
+    <script>
+        var currentPage = 1;
+        var totalPages = 3;
+
+        function showNextPage() {
+            if (currentPage < totalPages) {
+                var currentFrame = document.getElementById('page' + currentPage);
+                currentFrame.style.display = 'none';
+
+                currentPage++;
+
+                var nextFrame = document.getElementById('page' + currentPage);
+                nextFrame.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up by Google</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <button class="g-signin2" data-onsuccess="onSignIn">Sign Up by Google</div>
+
+    <script>
+        function onSignIn(googleUser) {
+            // Extract user details
+            var profile = googleUser.getBasicProfile();
+            var userId = profile.getId();
+            var userName = profile.getName();
+            var userEmail = profile.getEmail();
+
+            // You can send these details to your server for user registration
+            console.log('User ID: ' + userId);
+            console.log('User Name: ' + userName);
+            console.log('User Email: ' + userEmail);
+        }
+    </script>
+    
+    <button onclick="showNextPage()">Next</button>
+
+    <script>
+        var currentPage = 1;
+        var totalPages = 3;
+
+        function showNextPage() {
+            if (currentPage < totalPages) {
+                var currentFrame = document.getElementById('page' + currentPage);
+                currentFrame.style.display = 'none';
+
+                currentPage++;
+
+                var nextFrame = document.getElementById('page' + currentPage);
+                nextFrame.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

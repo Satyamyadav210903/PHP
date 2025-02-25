@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking</title>
+    <link rel="stylesheet" href="CSS/header.css">
+</head>
+<body>
+
+<!-- =========== header part ============= -->
+
+    <header class="nav">
+        <img src="logo/logo1.jpg" alt="logo" width="150" height="100">
+<!-- =========== manu bar ============= -->
+<nav>
+    
+   <ul class="nav-links">
+        <li class="li"><a href="Home/Home.html" class="link" onclick="loadPage('Home/Home.html')"><b>HOME</b></a></li>
+        <li class="li"><a href="#" class="link" onclick="loadPage('logo/card.html')"><b>PRODUCT</b></a></li>
+        <li class="li"><a href="#" class="link" onclick="loadPage('Services/Default.html')"><b>SERVICES</b></a></li>
+        <li class="li"><a href="#" class="link"><b>ABOUT</b></a></li>
+    </ul>
+</nav>
+</header>
+
+<!-- =========== Main Body Part ============= -->
+
+<div>
+    <iframe id="contentFrame" src="Home/Home.html" frameborder="0">
+    <main>
+        <section class="hero">
+            <div class="info">
+    
+            </div>
+        </section>
+    
+    </main>
+</iframe>
+
+<!-- =========== footer part ============= -->
+
+<footer class="footer">
+    <p class="p">© 2024 Online Banking</p>
+    <!--===== About Devloper =====-->
+            <li class="li"><a href="#" class="link" onclick="loadPage('Devloper/Portfolio.html')"><b>About Co-founder</b></a></li>
+</footer>
+</div>
+
+
+
+<!-- =========== Loading function through js============= -->
+
+
+
+    <script>
+        function loadPage(pageUrl) {
+            document.getElementById('contentFrame').src = pageUrl;
+        }
+    </script>
+</body>
+</html>

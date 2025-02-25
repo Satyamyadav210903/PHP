@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Calculator</title>
+</head>
+<style>
+     .oprator{
+          height: 100%;
+          width: 100%;
+     }
+     .cal{
+          height: 50px;
+          width: 100%;
+          background-color: gray;
+          color: white;
+          text-align: center;
+     }
+     .form{
+      height: 100%;
+      width: 100%;
+     }
+     
+     .table{
+      background-color: greenyellow;
+      height: 450px;
+      width: 390px;
+      margin-top: 50px;
+      margin-left: 30%;
+     }
+     .full{
+          margin-top: 0px;
+      size: 100%;
+      text-align: center;
+      background-color: lightblue;
+      color: red;
+     }
+</style>
+<body>
+     <div class="cal"><h1>Calculator</h1></div>
+<div class="container">
+<div class="calculator">
+<form class="form">
+<table border="5" class="table" cellspacing="15" cellpadding="0">
+<tr class="display">
+<td colspan="4" class="full"><h3>Result</h3><input type="text" name="display"></td>
+</tr>
+<tr>
+<td colspan="2" class="full"><input type="button" value="AC" onclick="display.value = '' " class="operator"></td>
+<td colspan="2" class="full"><input type="button" value="DE" onclick="display.value =display.value.toString().slice(0,-1)" class="operator"></td>
+</tr>
+<tr>
+<td class="full"><input type="button" value="%" onclick="display.value += '%' " class="operator"></td>
+<td class="full"><input type="button" value="/" onclick="display.value += '/' " class="operator"></td>
+<td class="full"><input type="button" value="*" onclick="display.value += '*' " class="operator"></td>
+<td class="full"><input type="button" value="+" onclick="display.value += '+' " class="operator"></td>
+</tr>
+<tr>
+<td class="full"><input type="button" value="-" onclick="display.value += '-' " class="operator"></td>
+<td class="full"><input type="button" value="9" onclick="display.value += '9' "></td>
+<td class="full"><input type="button" value="8" onclick="display.value += '8' "></td>
+<td class="full"><input type="button" value="7" onclick="display.value += '7' "></td>
+</tr>
+<tr>
+<td class="full"><input type="button" value="6" onclick="display.value += '6' "></td>
+<td class="full"><input type="button" value="5" onclick="display.value += '5' "></td>
+<td class="full"><input type="button" value="4" onclick="display.value += '4' "></td>
+<td class="full"><input type="button" value="3" onclick="display.value += '3' "></td>
+</tr>
+<tr>
+<td class="full"><input type="button" value="2" onclick="display.value += '2' "></td>
+<td class="full"><input type="button" value="1" onclick="display.value += '1'"></td>
+<td class="full"><input type="button" value="00" onclick="display.value += '00' "></td>
+<td class="full"><input type="button" value="0" onclick="display.value += '0' "></td>
+</tr>
+<tr>
+<td colspan="4" class="full" cellspacing="0"><input type="button" value="=" onclick="display.value =eval(display.value)"class="equal"></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+</body>
+</html>

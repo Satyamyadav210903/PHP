@@ -1,0 +1,50 @@
+body{
+    margin-left: 20vh;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+}
+input{
+    align-items: left;
+    border-radius: 10px;
+    height: 8vh;
+    width: 0vh;
+    justify-content: left;
+    align-items: left;
+}
+.input{
+    width: 100vh;
+}
+button {
+    padding: 10px 20px;
+    width: 50vh;
+    border-radius: 40px;
+    background: url('../logo/background.jpg') no-repeat center/cover;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+.varify{
+    width: 30vh;
+}
+.btn1{
+    margin-top: 10px;
+    width: 200vh;
+}
+button:hover {
+    background-color: gray;
+}
+p {
+    color: black;
+    text-align: left;
+}
+.select{
+    align-items: left;
+    border-radius: 10px;
+    height: 8vh;
+    width: 0vh;
+    justify-content: left;
+    align-items: left;
+}
